@@ -90,8 +90,14 @@ const printGreeting = () => {
 }
 
 printGreeting();
+
 const printMessage = org => {
   console.log(`${org} is awesome!`);
+}
+
+printMessage('freeCodeCamp');
+const addTwoNumbers = (num1, num2) => {
+  return num1 + num2;
 };
 
-printMessage("freeCodeCamp");
+console.log(addTwoNumbers(3, 4));
