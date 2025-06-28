@@ -84,19 +84,27 @@ let userData = {
   currentSong: null,
   songCurrentTime: 0,
 };
+const playlistSongs = document.getElementById("playlist-songs");
+const playButton = document.getElementById("play");
+const pauseButton = document.getElementById("pause");
+const nextButton = document.getElementById("next");
+const previousButton = document.getElementById("previous");
+const shuffleButton = document.getElementById("shuffle");
 
-const printGreeting = () => {
-  console.log('Hello there!'); 
-}
+const allSongs = [
+  {
+    id: 0,
+    title: "Scratching The Surface",
+    artist: "Quincy Larson",
+    duration: "4:25",
+    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3"
+  }
+];
 
-printGreeting();
+const audio = new Audio();
 
-const printMessage = org => {
-  console.log(`${org} is awesome!`);
-}
-
-printMessage('freeCodeCamp');
-const addTwoNumbers = (num1, num2) => num1 + num2;
-
-console.log(addTwoNumbers(3, 4));
-console.log(addTwoNumbers(3,4));
+let userData = {
+  songs: [...allSongs],
+  currentSong: null,
+  songCurrentTime: 0
+};
