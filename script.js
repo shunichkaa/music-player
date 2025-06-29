@@ -109,10 +109,5 @@ const renderSongs = (array) => {
 };
 
 const sortSongs = () => {
-const sortSongs = () => {
-  userData?.songs.sort((a, b) => a.title.localeCompare(b.title));
+  userData?.songs.sort((a, b) => {});
 };
-
-};
-
-renderSongs(userData?.songs);
