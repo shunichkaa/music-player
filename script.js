@@ -108,6 +108,11 @@ const renderSongs = (array) => {
   playlistSongs.innerHTML = songsHTML;
 };
 
-const sortSongs = () => {}
+const sortSongs = () => {
+const sortSongs = () => {
+  userData?.songs.sort((a, b) => a.title.localeCompare(b.title));
+};
+
+};
 
 renderSongs(userData?.songs);
