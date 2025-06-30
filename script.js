@@ -86,12 +86,9 @@ let userData = {
 };
 
 const playSong = (id) => {
-  const song = userData?.songs.find(song => song.id === id);
-  if (!song) return;
-
-  userData.currentSong = song;
-  audio.src = song.src;
-  audio.play();
+  const song = userData?.songs.find((song) => song.id === id);
+audio.src = song.src;
+audio.title = song.title;
 };
 
 const renderSongs = (array) => {
