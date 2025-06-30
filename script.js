@@ -85,7 +85,14 @@ let userData = {
   songCurrentTime: 0,
 };
 
+const playSong = (id) => {
+  const song = userData?.songs.find(song => song.id === id);
+  if (!song) return;
 
+  userData.currentSong = song;
+  audio.src = song.src;
+  audio.play();
+};
 
 const renderSongs = (array) => {
   const songsHTML = array
@@ -126,6 +133,3 @@ const sortSongs = () => {
 };
 
 renderSongs(sortSongs());
-
-const playSong = (id) => {
-};
