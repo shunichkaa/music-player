@@ -90,11 +90,14 @@ const playSong = (id) => {
   audio.src = song.src;
   audio.title = song.title;
 
-if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
-  audio.currentTime = 0;
-} else {
-  audio.currentTime = userData?.songCurrentTime;
-}
+  if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
+    audio.currentTime = 0;
+  } else {
+    audio.currentTime = userData?.songCurrentTime;
+  }
+userData.currentSong = song;
+playButton.classList.add("playing");
+
 };
 
 const renderSongs = (array) => {
