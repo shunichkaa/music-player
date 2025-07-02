@@ -103,7 +103,7 @@ const playSong = (id) => {
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
-  
+
   playButton.classList.remove("playing");
   audio.pause();
 };
@@ -125,8 +125,11 @@ const playPreviousSong = () => {
     return;
   } else {
     const currentSongIndex = getCurrentSongIndex();
+    const previousSong = userData?.songs[currentSongIndex - 1];
+    playSong(previousSong.id);
   }
 };
+
 
 const renderSongs = (array) => {
   const songsHTML = array
