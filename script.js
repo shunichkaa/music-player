@@ -109,7 +109,6 @@ const pauseSong = () => {
 };
 
 const playNextSong = () => {
-
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);
   } else {
@@ -128,6 +127,10 @@ const playPreviousSong = () => {
 
     playSong(previousSong.id);
    }
+};
+
+const highlightCurrentSong = () => {
+  const playlistSongElements = document.querySelectorAll(".playlist-song");
 };
 
 const renderSongs = (array) => {
