@@ -103,16 +103,20 @@ const playSong = (id) => {
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
-  
+
   playButton.classList.remove("playing");
   audio.pause();
 };
 
 const playNextSong = () => {
+const playNextSong = () => {
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);
+  } else {
+    const currentSongIndex = getCurrentSongIndex();
   }
 };
+}
 
 const renderSongs = (array) => {
   const songsHTML = array
