@@ -120,6 +120,8 @@ const playNextSong = () => {
   }
 };
 
+const playPreviousSong = () => {};
+
 const renderSongs = (array) => {
   const songsHTML = array
     .map((song)=> {
@@ -154,7 +156,7 @@ playButton.addEventListener("click", () => {
 
 pauseButton.addEventListener("click",  pauseSong);
 
-  nextButton.addEventListener("click", playNextSong);
+nextButton.addEventListener("click", playNextSong);
 
 const sortSongs = () => {
   userData?.songs.sort((a,b) => {
