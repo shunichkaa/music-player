@@ -135,10 +135,13 @@ const highlightCurrentSong = () => {
     `song-${userData?.currentSong?.id}`
   );
 
-playlistSongElements.forEach((songEl) => {
-  songEl.removeAttribute("aria-current");
-});
-
+  playlistSongElements.forEach((songEl) => {
+    songEl.removeAttribute("aria-current");
+  });
+  
+if (songToHighlight) {
+  songToHighlight.setAttribute("aria-current", "true");
+}
 };
 
 const renderSongs = (array) => {
