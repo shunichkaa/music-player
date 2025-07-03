@@ -131,7 +131,11 @@ const playPreviousSong = () => {
 
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
+  playlistSongElements.forEach(el => el.classList.remove("highlight"));
+
+ const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`)
 };
+
 
 const renderSongs = (array) => {
   const songsHTML = array
