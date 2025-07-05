@@ -99,7 +99,7 @@ const playSong = (id) => {
   playButton.classList.add("playing");
 
   highlightCurrentSong();
-   setPlayerDisplay();
+  setPlayerDisplay();
   audio.play();
 };
 
@@ -175,6 +175,8 @@ const renderSongs = (array) => {
 
   playlistSongs.innerHTML = songsHTML;
 };
+
+const setPlayButtonAccessibleText = () =>{}
 
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
 
