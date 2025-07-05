@@ -133,8 +133,11 @@ const playPreviousSong = () => {
 };
 
 const shuffle = () => {
-  userData?.songs.sort(() => Math.random() - 0.5);
+  userData.songs.sort(() => Math.random() - 0.5);
+  userData.currentSong = null;
+  userData.songCurrentTime = 0;
 };
+
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
