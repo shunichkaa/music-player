@@ -132,7 +132,7 @@ const playPreviousSong = () => {
    }
 };
 
-  
+  const shuffle = () => {};
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
