@@ -106,7 +106,7 @@ const playSong = (id) => {
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
-  
+
   playButton.classList.remove("playing");
   audio.pause();
 };
@@ -144,9 +144,12 @@ const shuffle = () => {
 };
 
 const deleteSong = (id) => {
-  userData.songs = userData?.songs.filter(song => song.id !== id);
-};
+  userData.songs = userData?.songs.filter((song) => song.id !== id);
+renderSongs(userData?.songs);
+highlightCurrentSong();
+setPlayButtonAccessibleText();
 
+};
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
