@@ -219,14 +219,13 @@ shuffleButton.addEventListener("click", shuffle);
 audio.addEventListener("ended", () => {
   const currentSongIndex = getCurrentSongIndex();
   const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
-audio.addEventListener("ended", () => {
-  const currentSongIndex = getCurrentSongIndex();
-  const nextSongExists = currentSongIndex < userData.songs.length - 1;
 
-  if (nextSongExists) {
+if (nextSongExists) {
     playNextSong();
+  } else {
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
   }
-});
 
 });
 
