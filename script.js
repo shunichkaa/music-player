@@ -206,8 +206,21 @@ const renderSongs = (array) => {
   if (userData?.songs.length === 0) {
     const resetButton = document.createElement("button");
     const resetText = document.createTextNode("Reset Playlist");
-  resetButton.id = "reset";
+
+    resetButton.id = "reset";
+    resetButton.ariaLabel = "Reset playlist";
+  const resetButton = document.createElement("button");
+const resetText = document.createTextNode("Reset Playlist");
+
+resetButton.id = "reset";
 resetButton.ariaLabel = "Reset playlist";
+
+// добавляем текст в кнопку
+resetButton.appendChild(resetText);
+
+// добавляем кнопку в список песен
+playlistSongs.appendChild(resetButton);
+
   }
 
 };
