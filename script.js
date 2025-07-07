@@ -209,17 +209,12 @@ const renderSongs = (array) => {
 
     resetButton.id = "reset";
     resetButton.ariaLabel = "Reset playlist";
-  const resetButton = document.createElement("button");
-const resetText = document.createTextNode("Reset Playlist");
+    resetButton.appendChild(resetText);
+    playlistSongs.appendChild(resetButton);
 
-resetButton.id = "reset";
-resetButton.ariaLabel = "Reset playlist";
-
-// добавляем текст в кнопку
-resetButton.appendChild(resetText);
-
-// добавляем кнопку в список песен
-playlistSongs.appendChild(resetButton);
+  resetButton.addEventListener("click", () => {
+  
+});
 
   }
 
