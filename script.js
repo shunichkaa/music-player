@@ -214,6 +214,10 @@ const renderSongs = (array) => {
 
 resetButton.addEventListener("click", () => {
   userData.songs = [...allSongs];
+
+  renderSongs(sortSongs());
+  setPlayButtonAccessibleText();
+  resetButton.remove();
 });
 
 
